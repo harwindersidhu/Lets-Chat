@@ -19,23 +19,22 @@ const Register = () => {
 
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-
+      console.log("Res: ", res);
       const storageRef = ref(storage, username);
 
       const uploadTask = uploadBytesResumable(storageRef, file);
 
-      uploadTask.on('state_changed',
+      uploadTask.on(
         (error) => {
           console.log("Error while uploading picture: ", error);
           setError(true);
         },
         () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            setError(false);
+          getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
             await updateProfile(res.user, {
               displayName: username,
               photoURL: downloadURL
-            })
+            });
             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
               displayName: username,
