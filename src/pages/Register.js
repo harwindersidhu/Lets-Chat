@@ -5,6 +5,7 @@ import { auth, storage, db } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -73,7 +74,7 @@ const Register = () => {
           <button>Sign Up</button>
           {error && <span>Something went wrong.</span>}
         </form>
-        <p>Do you have an account? Login</p>
+        <p>Do you have an account? <Link to="/login">Login</Link></p>
       </div>
     </div>
   );
