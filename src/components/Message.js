@@ -1,6 +1,7 @@
 import React from "react";
 
-const Message = () => {
+const Message = (props) => {
+  console.log("Messages: ", props.message);
   return (
     <div className="message owner">
       <div className="message-info">
