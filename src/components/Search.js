@@ -28,7 +28,7 @@ const Search = () => {
 
   const handleSelect = async () => {
     //check whether the group exists, if not create
-    const combinedId = currentUser.uid > user.uid ? currentUser.uid + user.id : user.uid + currentUser.uid;
+    const combinedId = currentUser.uid > user.uid ? currentUser.uid + user.uid : user.uid + currentUser.uid;
     try {
       const res = await getDoc(doc(db, "chats", combinedId));
       
