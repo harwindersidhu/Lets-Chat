@@ -24,12 +24,12 @@ npm start
 ## Screenshots
 
 - Register page.
-  - !["chat_register"](./docs/scheduler_create.png)
+  - !["chat_register"](./docs/Register.png)
 
 - Login Page.
-  - !["chat_login"](./docs/scheduler_home.png)
+  - !["chat_login"](./docs/Login.png)
 
 - When a user logs in, on the left side, on top you will see the logged-in user. Below that you will see all users with whom chat has been initiated. The user with the latest message will be on top of the list. We can send pictures and text messages. 
-  - !["chat_home"](./docs/scheduler_delete.png)
+  - !["chat_home"](./docs/Home.png)
 
 
