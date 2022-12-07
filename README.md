@@ -1,4 +1,4 @@
-# Chat App
+# Let's Chat
 Using the latest tools and techniques, I build an application using React and firebase that allows users to chat. The functionalities include registration, login, sending text messages and sending images. 
  
 
